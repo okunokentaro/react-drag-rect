@@ -1,0 +1,44 @@
+{
+  "name": "react-drag-rect",
+  "version": "0.0.1",
+  "bugs": {
+    "url": "https://github.com/okunokentaro/react-drag-rect/issues"
+  },
+  "dependencies": {
+    "react": "^16.7.0-alpha.2",
+    "react-dom": "^16.7.0-alpha.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/react": "^16.7.1",
+    "@types/react-dom": "^16.0.9",
+    "jest": "^23.6.0",
+    "prettier": "^1.15.1",
+    "ts-jest": "^23.10.4",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  },
+  "homepage": "https://github.com/okunokentaro/react-drag-rect#readme",
+  "keywords": [],
+  "license": "Proprietary",
+  "main": "index.js",
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true,
+    "trailingComma": "all"
+  },
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okunokentaro/react-drag-rect.git"
+  },
+  "scripts": {
+    "build": "webpack --mode development",
+    "start": "webpack-dev-server  --mode development",
+    "test": "npx jest --watch",
+    "test:single-run": "npx jest"
+  }
+}
