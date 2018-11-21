@@ -12,6 +12,8 @@ export default function App() {
     const { clientX: x, clientY: y } = ev;
     const id = uuid();
 
+    const fixedY = Math.round(y / 14) * 14;
+
     const newElement = {
       element: (
         <div
@@ -23,7 +25,7 @@ export default function App() {
             width: w,
             height: h,
             left: `${x - w - 5}px`,
-            top: `${y - h * 0.5 - 10}px`,
+            top: `${fixedY - h * 0.5 - 10}px`,
             border: '1px solid #000',
           }}
         />
@@ -46,7 +48,9 @@ export default function App() {
 
     const id = currentUuid
     const filtered = elements.filter(v => v.id !== id)
-    const [ox, oy] = originXY;
+    const [ox] = originXY;
+
+    const fixedY = Math.round(y / 14) * 14;
 
     const newElement = {
       element: (
@@ -56,10 +60,10 @@ export default function App() {
             background: 'tomato',
             boxShadow: '1px 1px rgba(0,0,0,0.5)',
             position: 'absolute',
-            width: w + (x - ox),
+            width: w + (Math.round((x - ox) / 14) * 14),
             height: h,
             left: `${ox - w - 5}px`,
-            top: `${y - h * 0.5 - 10}px`,
+            top: `${fixedY - h * 0.5 - 10}px`,
             border: '1px solid #000',
           }}
         />
