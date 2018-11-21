@@ -1,20 +1,18 @@
 import React from 'react';
-import styled from 'react-emotion';
+import { css } from 'react-emotion';
 
 export default function Note({
-  key,
   width,
   height,
   left,
   top,
 }: {
-  key: string;
   width: number;
   height: number;
   left: string;
   top: string;
 }): JSX.Element {
-  const Styled = styled('div')({
+  const style = css({
     background: 'tomato',
     boxShadow: '1px 1px rgba(0,0,0,0.5)',
     position: 'absolute',
@@ -25,5 +23,5 @@ export default function Note({
     top,
   });
 
-  return <Styled key={key} />;
+  return <div className={style} />;
 }
